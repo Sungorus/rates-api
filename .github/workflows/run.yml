@@ -2,7 +2,7 @@ name: Run
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,24 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run index.js
-      run: node index.js
+      - name: Run
+        run: node run.js
 
-    - name: Commit and push changes
-      run: |
-        git config --local user.email "actions@github.com"
-        git config --local user.name "GitHub Actions"
-        git add .
-        git commit -m "Update rates"
-        git push
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          git commit -m "Update rates"
+          git push
