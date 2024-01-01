@@ -18,9 +18,10 @@ async function fetchExchangeRates(
     const response = await fetch(apiEndpoint)
     const { rates } = await response.json()
     const filePath = path.join(__dirname, folderName, `${formattedDate}.json`)
-    await writeFileSyncRecursive(filePath, JSON.stringify(rates, null, 2))
+    const content = JSON.stringify(rates, null, 2)
+    await writeFileSyncRecursive(filePath, content)
     const latestFilePath = path.join(__dirname, folderName, 'latest.json')
-    await writeFileSyncRecursive(latestFilePath, JSON.stringify(rates, null, 2))
+    await writeFileSyncRecursive(latestFilePath, content)
   } catch (error) {
     process.exit(1)
   }
