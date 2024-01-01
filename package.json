@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Sungorus/rates-api/issues"
   },
-  "homepage": "https://github.com/Sungorus/rates-api#readme"
+  "homepage": "https://github.com/Sungorus/rates-api#readme",
+  "prettier": {
+    "singleQuote": true
+  }
 }
