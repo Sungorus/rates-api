@@ -8,19 +8,22 @@ async function writeFileSyncRecursive(filename, content = '') {
 
 async function fetchExchangeRates(
   baseCurrency = 'USD',
-  folderName = 'exchange-rates',
+  folderName = 'v1',
 ) {
   const apiEndpoint = `https://open.er-api.com/v6/latest?base=${baseCurrency}`
 
   try {
     const currentDate = new Date()
-    const formattedDate = currentDate.toISOString().split('T')[0]
+    const year = String(currentDate.getFullYear());
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const day = String(currentDate.getDate()).padStart(2, '0');
     const response = await fetch(apiEndpoint)
     const { rates } = await response.json()
-    const filePath = path.join(__dirname, folderName, `${formattedDate}.json`)
+    const currencyFolder = path.join(__dirname, folderName, baseCurrency, year, month);
+    const filePath = path.join(currencyFolder, `${day}.json`);
     const content = JSON.stringify(rates, null, 2)
     await writeFileSyncRecursive(filePath, content)
-    const latestFilePath = path.join(__dirname, folderName, 'latest.json')
+    const latestFilePath = path.join(__dirname, folderName, baseCurrency, 'latest.json')
     await writeFileSyncRecursive(latestFilePath, content)
   } catch (error) {
     process.exit(1)
