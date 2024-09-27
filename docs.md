@@ -23,6 +23,7 @@ To access the exchange rates for a specific day, use the following URL format:
 
 ```bash
 https://cdn.jsdelivr.net/gh/Sungorus/rates-api@2/data/USD/2024/01/01.json
+```
 
 ### Example Requests
 
@@ -58,12 +59,6 @@ To get the latest exchange rates:
 
 ```bash
 curl https://cdn.jsdelivr.net/gh/Sungorus/rates-api@2/data/USD/latest.json
-```
-
-or
-
-```bash
-https://cdn.jsdelivr.net/gh/Sungorus/rates-api/exchange-rates/latest.json
 ```
 
 ### Response Example for Latest Rates
