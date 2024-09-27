@@ -1,4 +1,4 @@
-[![Run](https://github.com/Sungorus/rates-api/actions/workflows/run.yml/badge.svg?branch=2)](https://github.com/Sungorus/rates-api/actions/workflows/run.yml)
+[![Run](https://github.com/Sungorus/rates-api/actions/workflows/run.yml/badge.svg?branch=1)](https://github.com/Sungorus/rates-api/actions/workflows/run.yml)
 
 # Rates API
 
