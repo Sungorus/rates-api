@@ -22,5 +22,8 @@
     "tabWidth": 2,
     "semi": false,
     "arrowParens": "always"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
   }
 }
