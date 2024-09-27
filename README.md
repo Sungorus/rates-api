@@ -1,3 +1,5 @@
+[![Run](https://github.com/Sungorus/rates-api/actions/workflows/run.yml/badge.svg?branch=2)](https://github.com/Sungorus/rates-api/actions/workflows/run.yml)
+
 # Rates API
 
 This API provides access to daily exchange rates for various currencies. Exchange rates are stored in a structured format for easy access and manageability.
