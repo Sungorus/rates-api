@@ -1,4 +1,4 @@
-[![Run](https://github.com/Sungorus/rates-api/actions/workflows/run.yml/badge.svg?branch=2)](https://github.com/Sungorus/rates-api/actions/workflows/run.yml)
+[![Run](https://github.com/Sungorus/rates-api/actions/workflows/run.yml/badge.svg?branch=1)](https://github.com/Sungorus/rates-api/actions/workflows/run.yml)
 
 # Rates API
 
@@ -22,14 +22,14 @@ Exchange rates are stored in the following structure:
 To access the exchange rates for a specific day, use the following URL format:
 
 ```bash
-https://cdn.jsdelivr.net/gh/Sungorus/rates-api@2/data/USD/2024/01/01.json
+https://cdn.jsdelivr.net/gh/Sungorus/rates-api/data/USD/2024/01/01.json
 
 ### Example Requests
 
 To get the exchange rates for January 1, 2024:
 
 ```bash
-curl https://cdn.jsdelivr.net/gh/Sungorus/rates-api@2/data/USD/2024/01/01.json
+curl https://cdn.jsdelivr.net/gh/Sungorus/rates-api/data/USD/2024/01/01.json
 ```
 
 ### Response Example
@@ -49,7 +49,7 @@ The response for daily rates will be a JSON object containing the exchange rates
 The latest exchange rates can be accessed using the following URL format:
 
 ```bash
-https://cdn.jsdelivr.net/gh/Sungorus/rates-api@2/data/USD/latest.json
+https://cdn.jsdelivr.net/gh/Sungorus/rates-api/data/USD/latest.json
 ```
 
 ### Example Requests for Latest Rates
@@ -57,13 +57,7 @@ https://cdn.jsdelivr.net/gh/Sungorus/rates-api@2/data/USD/latest.json
 To get the latest exchange rates:
 
 ```bash
-curl https://cdn.jsdelivr.net/gh/Sungorus/rates-api@2/data/USD/latest.json
-```
-
-or
-
-```bash
-https://cdn.jsdelivr.net/gh/Sungorus/rates-api/exchange-rates/latest.json
+curl https://cdn.jsdelivr.net/gh/Sungorus/rates-api/data/USD/latest.json
 ```
 
 ### Response Example for Latest Rates

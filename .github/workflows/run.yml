@@ -1,4 +1,4 @@
-name: Run
+name: Fetch
 
 on:
   schedule:
@@ -23,9 +23,6 @@ jobs:
 
       - name: Fetch
         run: node fetch.js
-
-      - name: Run
-        run: node run.js
 
       - name: Commit and push changes
         run: |
